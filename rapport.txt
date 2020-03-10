@@ -1,0 +1,127 @@
+!! Ne pas changer le formattage !!
+# 1 Commande Linux
+
+## 1.1 Commandes fréquentes
+1- i
+2- x
+3- o
+4- c
+5- j
+6- v
+7- y
+8- d
+9- a
+10- n
+11- k
+12- p
+13- m
+14- g
+15- w
+16- l
+17- t
+18- r
+19- e
+20- q
+21- u
+22- b
+23- s
+24- h
+25- f
+
+## 1.2 Commandes ls
+1- 0
+2- 8
+3- vader
+4- def-dooku
+
+## 1.3 Permissions
+1- non
+2- oui
+3-
+  a-Faux
+  b-Faux
+  c-Vrai
+4- chmod 744 toto.txt
+
+## 1.4 Flux de sortie
+1- 
+  a- ps > /home/etud1/processes.txt
+  b- time >> /home/etu1/processes.txt
+2- >>
+
+## 1.5 Opérateur de chaînage (|)
+1- cat /proc/cpuinfo
+2- cat /proc/cpuinfo | grep 'model name'
+3-
+commande- cat /usr/include/math.h | grep 'M_E'
+sortie- # define M_E        2.7182818284590452354    /* e */
+# define M_El        2.718281828459045235360287471352662498L /* e */
+# define M_Ef16        __f16 (2.718281828459045235360287471352662498) /* e */
+# define M_Ef32        __f32 (2.718281828459045235360287471352662498) /* e */
+# define M_Ef64        __f64 (2.718281828459045235360287471352662498) /* e */
+# define M_Ef128    __f128 (2.718281828459045235360287471352662498) /* e */
+# define M_Ef32x    __f32x (2.718281828459045235360287471352662498) /* e */
+# define M_Ef64x    __f64x (2.718281828459045235360287471352662498) /* e */
+
+4- 
+commande- ls /usr/bin/ -l | wc -l
+nombre de fichier- 1536
+
+## 1.6 Gestion des tâches 
+1- a,d
+2- infini
+3- envoie du signal d'interruption
+4- suspension du processus en premier plan
+5- killall sleep
+6- bg
+7- fg
+8- faux
+
+## 1.7 Variables d'environnement
+1- env | grep $PATH
+2- export PATH=$PATH:/x/y/z
+
+# 2 Compilation et exécution
+## 2.2 Compilation
+1- L’option -c permet de compiler et d’assembler, mais ne fait pas l’édition de lien.
+2- gcc qui-suis-je.c -o qui-suis-je
+3- 
+Sortie-
+Utilisateur: 1000
+Processus: 11020
+Processus parent: 10974
+-Nom: Shopishop
+
+
+## 2.3 Appels système
+1-execve, son rôle consiste à exécuter le programme qui lui a été passé en argument (le 1er argument)
+2-Le syscall “write” est invoqué par printf
+
+## 2.4 Débogage
+1- gcc -g qui-suis-je.c -o qui-suis-je-debug
+2- gdb qui-suis-je-debug
+3- b 6
+4- run 
+5- 
+commande- backtrace
+sortie- 
+#0  main () at qui-suis-je.c:6
+
+## 2.5
+2-gdb plante core
+3-
+sortie-
+#0  0x00005617be714602 in main () at plante.c:5
+5		char a = *s;
+
+# 4 Programmation avec threads
+1-Le programme prend 0.0034832 secondes.
+2-Avec 2 coeurs de calculs (la machine hote etant limitante), le programme prend 0.0024068 secondes.
+3-1 Coeur : 0.1314198, 2 coeurs : 0.109226 secondes
+4-Non, le multi threading n'en vaut la peine que lorsque la tâche peut etre effectuée 
+plus rapidement à l'aide de la stratégie : diviser pour mieux régner. En effet, le multi threading permet de profiter 
+pleinement de plusieurs coeurs de calculs. Aussi, le multi threading peut être utile lorsque la tache implique que certains threads 
+peuvent être bloqués ou en attente, d'autres threads peuvent continuer à etre actif pendant l'attente.
+
+#### Fin du rapport ####
+
